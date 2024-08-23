@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!--COUNTER-->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+         <!--END-->
+         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./tyyli/style.css">
+    <title>Animoitu sivu</title>
+</head>
+<body>
+    
+    <!--Millä lähden liikkeelle, navi alkaa-->
+    <nav>
+        <div class="logo", data-aos="fade-down">
+            <h1>WEB15: HTML/CSS</h1>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="icon" onclick="DisplayMenu()">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </a>
+            <a href="#">About</a>
+            <a href="#">Travel</a>
+            <a href="#">Contact</a>
+            <a href="#">Social Media</a>
+        </div>
+     </nav>
+
+     <script>
+      function DisplayMenu() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+
+     <!--navi loppuu-->
+
+
+        <!--top alkaa-->
+        <div class="top">
+            <div class="loading-box">
+                <div class="loading">Loading</div>%
+                <div class="counter">100</div>
+            </div>
+        <!--ehkä oikea paikka-->
+        <div class="top-photos">
+            <img src="./kuvat/forest-5359800_1920.jpg" alt="">
+            <img src="./kuvat/getreide-8100626_1920.jpg" alt="">
+            <img src="./kuvat/new-brunswick-2406444_1920.jpg" alt="">
+        </div>
+        <!--Teksti-->
+            <center>
+            <div class="title">
+                <h1>Matkailusivusto</h1>
+                <div class="subtitle">
+                SCROLL DOWN <br>
+                &#x2193;
+                </div>
+            </div>
+            </center>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+             $('.counter').counterUp({
+              delay: 13,
+              time: 1600
+             });
+            });
+        </script>
+
+        <!--Top loppuu-->
+
+        <!--Päivä 2 alkaa-->
+
+        <div class="about">
+            <p data-aos="fade-down">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo hic possimus,
+                quae delectus dolore numquam ex repellendus, porro amet sequi suscipit ducimus?
+                Assumenda laudantium itaque unde amet quo suscipit odio.</p>
+        </div>
+
+        <div class="travel">
+            <p data-aos="fade-down">
+                Tämä on minun <br>
+                <span>Matkailu</span> <br>
+                sivusto
+
+            </p>
+        </div>
+
+        <center>
+            <p data-aos="fade-down", style="font-size: 80px; font-family: 'monoton', cursive; padding: 30px;">Ota yhteyttä</p>
+            <p data-aos="fade-down", style="font-size: 25px; margin-bottom: 100px;">yritys@yritys.fi</p>
+        </center>
+
+        <center>¨
+            <div class="socialmedia">
+            <p style="font-size: 80px; font-family: 'monoton', cursive; padding: 30px;", data-aos="fade-down">Sosiaaliset mediat</p>
+            <div class="section", data-aos="fade-down">
+                <div class="container">
+                    <img src="./kuvat/facebook-1799691_640.png" alt="">
+                </div>
+                <br> Facebook
+            </div>
+            <div class="section", data-aos="fade-down">
+                <div class="container">
+                    <img src="./kuvat/sl_z_072523_61700_01.jpg" alt="">
+                </div>
+                <br> X
+            </div>
+            <div class="section", data-aos="fade-down">
+                <div class="container">
+                    <img src="./kuvat/videos-2277016_640.png" alt="">
+                </div>
+                <br> YouTube
+            </div>
+
+            </div>
+        </center>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+    });
+  </script>
+
+</body>
+</html>

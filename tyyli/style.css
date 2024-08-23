@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Millä tökin default asetuksia */
+
+* {
+    font-family: 'urbanist', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    color: aliceblue;
+}
+
+/* Mikä on root */
+
+:root {
+    --gray:rgb(177, 177, 177);
+}
+
+body {
+    background-color: black;
+}
+
+.topnav {
+    float: right;
+}
+
+.topnav a {
+    font-size: 25px;
+    text-decoration: none;
+    display: none;
+}
+
+.topnav a.icon {
+    margin: 30px;
+    float: right;
+    display: block;
+    width: auto;
+}
+
+.dot {
+    font-family: 'monoton', cursive;
+    background-color: aliceblue;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    margin: 1px;
+    float: left;
+}
+
+
+.topnav.responsive {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    z-index: +2;
+    background-color: black;
+}
+
+.topnav.responsive a {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0px;
+    margin: 10px;
+    display: none;
+}
+
+.topnav.responsive a:hover {
+    font-family: 'monoton', cursive;
+    color: var(--gray);
+}
+
+.logo h1 {
+    position: absolute;
+    font-size: 40px;
+    margin: 20px;
+    font-family: 'monoton', cursive;
+}
+
+.loading-box {
+    margin-top: 350px;
+    width: 10%;
+    position: absolute;
+    margin-left: 45%;
+    text-align: center;
+    font-size: 25px;
+    animation: remove 18s;
+    opacity: 0;
+}
+
+.top-photos {
+    text-align: center;
+    margin-top: 150px;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    z-index: 1;
+}
+
+.top-photos img {
+    height: 480px;
+}
+
+.top-photos img:nth-child(1), .top-photos img:nth-child(2), .top-photos img:nth-child(3) {
+
+    opacity: 0;
+    animation: reveal 6s;
+    animation-delay: 3s;
+}
+
+.top-photos img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.top-photos img:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.title {
+    margin-top: 300px;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    animation: show 7s forwards;
+    animation-delay: 12s;
+    opacity: 0;
+}
+
+.title h1 {
+    font-size: 90px;
+    font-family: 'monoton', cursive;
+}
+
+.subtitle {
+    font-size: 25px;
+}
+
+@keyframes show {
+    
+    0% {
+        opacity: 0;
+        transform: none;
+    }
+    20% {
+        opacity: 1;
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+    27% {
+        opacity: 1;
+        transform: rotate3d(-285, 85, 30, 180deg);
+
+    }
+    34% {
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: none;
+    }
+    40% {
+        opacity: 0;
+        transform: none;
+    }
+    60% {
+        opacity: 1;
+        transform: none;
+    }
+    75% {
+        opacity: 1;
+        transform: none;
+    }
+    }
+
+@keyframes remove {
+    0% {
+        opacity: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+
+}
+
+/* Päivä 2 alkaa */
+
+.top {
+    height: 1200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../kuvat/italy-4940776_1920.jpg);
+    background-size: cover;
+    animation: showing 14.2s;
+}
+
+@keyframes showing {
+    0% {
+     height: 1200px;
+     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url(../kuvat/italy-4940776_1920.jpg);
+     background-size: cover;
+    }
+    25% {
+     height: 1200px;
+     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url(../kuvat/italy-4940776_1920.jpg);
+     background-size: cover;
+    }
+    50% {
+     height: 1200px;
+     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url(../kuvat/italy-4940776_1920.jpg);
+     background-size: cover;
+    }
+    80% {
+     height: 1200px;
+     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)), url(../kuvat/italy-4940776_1920.jpg);
+     background-size: cover;
+    }
+    100% {
+     height: 1200px;
+     background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0)), url(../kuvat/italy-4940776_1920.jpg);
+     background-size: cover;
+    }
+}
+.about {
+    height: 750px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../kuvat/cloudy-1645868_1920.jpg);
+    background-size: cover;
+}
+
+.about p {
+    padding: 280px;
+    line-height: 30px;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.travel {
+    height: 750px;
+    background: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../kuvat/nature-4565789_1920.jpg);
+    background-size: cover;
+}
+
+.travel p {
+    color: var(--gray);
+    padding-top: 150px;
+    font-size: 120px;
+    text-align: center;
+}
+
+.travel span {
+    font-family: 'monoton', cursive;
+    color: aliceblue;
+}
+
+.socialmedia .section {
+    height: 370px;
+    float: left;
+    width: 33.33%;
+    padding: 20px;
+    cursor: crosshair;
+}
+
+.socialmedia .container {
+    height: 260px;
+    overflow: hidden;
+}
+
+.socialmedia .container img {
+    width: 100%;
+    height: auto;
+}
